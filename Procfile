@@ -1,3 +1,1 @@
-web: gunicorn BlogProject.wsgi --log-file -
-
-heroku ps:scale web=1
+web: gunicorn BlogProject.wsgi
