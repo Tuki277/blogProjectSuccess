@@ -1,0 +1,46 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block cssblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/styles/style.css' %}">
+<link rel="alternate" type="application/rss+xml" title="{% static '/feed.xml' %}">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper-masthead">
+  <div class="container">
+  </div>
+</div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+
+  <div class="entry">
+    <p>{{ object.content | safe }}</p>
+
+{% comment %} <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'hello world'</span><span class="p">)</span>
+</code></pre></div></div> {% endcomment %}
+
+{% comment %} <p>{{ object.content | safe }}</p> {% endcomment %}
+
+  </div>
+</article>
+
+    </div>
+
+<div class="wrapper-footer">
+  <div class="container">
+  </div>
+</div>
+{% endblock %}
+
+{% block jsblock %}
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+{% endblock %}

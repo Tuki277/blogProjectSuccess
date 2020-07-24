@@ -1,0 +1,51 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block cssblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/styles/style.css' %}">
+<link rel="alternate" type="application/rss+xml" title="Tran Huy - Stay Hungry, Stay Foolish" href="{% static '/feed.xml' %}">
+{% endblock %}
+
+{% block content %}
+<div class="wrapper-masthead">
+  <div class="container">
+  </div>
+</div>
+{% for post in post_list %}
+
+<div id="main" role="main" class="container">
+  <div class="posts">
+
+<article class="post">
+
+  <h1><a href="{% url 'Home:detail' post.slug %}">{{ post.title }}</a></h1>
+
+  <div class="entry">
+    <p>{{post.content|slice:":200" }}</p>
+  </div>
+
+  <a href="{% url 'Home:detail' post.slug %}" class="read-more">Read More</a>
+</article>
+
+{% endfor %}
+
+</div>
+  </div>
+
+  <div class="wrapper-footer">
+    <div class="container">
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block jsblock %}
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+{% endblock %}
+
