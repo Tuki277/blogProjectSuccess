@@ -23,7 +23,7 @@ SECRET_KEY = '(a-k*+n=n76ygsjlq7jpx!l2w8(v*t#bh=(ss-i@n_xmbxk#n9'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['tranhuyit.herokuapp.com', '127.0.0.1']
-ALLOWED_HOSTS = ['tranhuyit.herokuapp.com/static/homepage/styles/style.css', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
